@@ -10,7 +10,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.moviestime.presentation.theme.MoviesTimeTheme
-import com.example.moviestime.presentation.views.Home.HomeView
 import com.example.moviestime.presentation.views.movies.MoviesView
 
 class MainActivity : ComponentActivity() {

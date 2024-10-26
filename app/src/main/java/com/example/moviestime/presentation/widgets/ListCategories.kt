@@ -6,7 +6,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.example.moviestime.presentation.utli.Dimens.MediumPadding0
-import com.example.moviestime.presentation.utli.Dimens.MediumPadding2
 import com.example.moviestime.presentation.views.movies.compnent.CustomTextCategories
 
 @Composable
