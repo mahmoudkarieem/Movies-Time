@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="App.Staring.Theme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/movie_icon</item>
+        <item name="windowSplashScreenBackground">#121212</item>
+        <item name="postSplashScreenTheme">@style/Theme.MoviesTime</item>
+    </style>
+</resources>
