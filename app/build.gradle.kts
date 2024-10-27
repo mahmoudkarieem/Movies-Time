@@ -1,9 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id ("kotlin-kapt")
-    id ("com.google.dagger.hilt.android")
-    id ("kotlin-parcelize")
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -69,57 +69,61 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation ("androidx.core:core-splashscreen:1.0.1")
+    implementation(libs.androidx.core.splashscreen)
 
 
-    implementation( "androidx.navigation:navigation-compose:2.6.0")
-    implementation("androidx.compose.material3:material3")
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.material3)
 
 
-    //Dagger Hilt
-    implementation ("com.google.dagger:hilt-android:2.48")
-    kapt( "com.google.dagger:hilt-compiler:2.48")
-    implementation( "androidx.hilt:hilt-navigation-compose:1.0.0")
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
 
 
-    //Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation( "com.squareup.retrofit2:converter-gson:2.9.0")
-
-    //Coil
-    implementation("io.coil-kt:coil-compose:2.4.0")
-    implementation("io.coil-kt:coil-gif:2.4.0")
-
-    //Datastore
-    implementation( "androidx.datastore:datastore-preferences:1.0.0")
-
-    //Compose Foundation
-    implementation ("androidx.compose.foundation:foundation:1.4.3")
-
-    //Accompanist
-    implementation ("com.google.accompanist:accompanist-systemuicontroller:0.31.4-beta")
-
-    //Paging 3
-    implementation ("androidx.paging:paging-runtime:3.1.1")
-    implementation ("androidx.paging:paging-compose:3.2.0-rc01")
-    implementation ("androidx.paging:paging-common-ktx:3.3.2")
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
 
 
+    implementation(libs.coil.compose)
+    implementation(libs.coil.gif)
 
-    implementation ("androidx.room:room-runtime:2.5.2")
-    kapt ("androidx.room:room-compiler:2.5.2")
-    implementation ("androidx.room:room-ktx:2.5.2")
 
-    //coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+    implementation(libs.androidx.datastore.preferences)
+
+
+    implementation(libs.androidx.foundation)
+
+
+    implementation(libs.accompanist.systemuicontroller)
+
+
+    implementation(libs.androidx.paging.runtime)
+    implementation(libs.androidx.paging.compose)
+    implementation(libs.androidx.paging.common.ktx)
 
 
 
+    implementation (libs.androidx.room.runtime)
+    kapt (libs.androidx.room.compiler)
+    implementation (libs.androidx.room.ktx)
 
-//    implementation(libs.android.lifecycle.viewmodel.ktx)
-//    implementation(libs.android.lifecycle.runtime.ktx)
-//    implementation(libs.android.runtime.livedata)
-//    implementation(libs.android.lifecycle.livedata.ktx)
 
-//    implementation(libs.javax.inject)
+    implementation(libs.kotlinx.coroutines.android)
+//
+//    implementation("andrioidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+//    implementation("andrioidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+//    implementation("androidx.compose.runtime:runtime-livedata:1.2.0-beta02")
+//    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
+//
+//    implementation("android.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+//    implementation("android.lifecycle:lifecycle-runtime-ktx:2.5.1")
+//    implementation("android.compose.runtime:runtime-livedata:1.2.0-beta02")
+//    implementation("android.lifecycle:lifecycle-livedata-ktx:2.2.0")
+
+
+
+    implementation(libs.javax.inject)
+
+
 }

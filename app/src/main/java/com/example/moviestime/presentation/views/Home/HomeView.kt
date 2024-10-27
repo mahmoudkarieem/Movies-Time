@@ -8,11 +8,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavHostController
+import com.example.moviestime.presentation.common_component.BottomNavigationBar
 import com.example.moviestime.presentation.theme.MoviesTimeTheme
 import com.example.moviestime.presentation.utli.Dimens.ImageHomeHeight
 import com.example.moviestime.presentation.utli.Dimens.MediumPadding1
@@ -23,11 +26,20 @@ import com.example.moviestime.presentation.widgets.ListTendingMovies
 @Composable
 fun HomeView(
     modifier: Modifier = Modifier
+    ,navController:NavHostController
 ) {
+    Scaffold(
+        bottomBar = {
+            BottomNavigationBar(navController = navController)
+        }
+    )
+
+    {innerPadding->
     Column(
-        modifier = Modifier
+        modifier = Modifier .padding(innerPadding)
             .background(color = MaterialTheme.colorScheme.background)
             .fillMaxSize()
+
 
             .padding(MediumPadding1)
     ) {
@@ -65,13 +77,13 @@ fun HomeView(
         ListTendingMovies(fakeMoviesList = listFakeMovies)
 
     }
-}
+}}
 
-@Preview
-@Composable
-private fun PreviewHomeView() {
-    MoviesTimeTheme {
-        HomeView()
-    }
-
-}
+//@Preview
+//@Composable
+//private fun PreviewHomeView() {
+//    MoviesTimeTheme {
+//        HomeView()
+//    }
+//
+//}
