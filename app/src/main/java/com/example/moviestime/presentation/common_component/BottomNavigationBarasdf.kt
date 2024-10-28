@@ -26,7 +26,7 @@ fun BottomNavigationBar(navController: NavHostController) {
     NavigationBar(
         modifier = Modifier
             .background(color = MaterialTheme.colorScheme.background)
-            .padding(horizontal = MediumPadding1)
+            .padding(horizontal = MediumPadding1,)
             .clip(shape = MaterialTheme.shapes.extraLarge),
         containerColor = MaterialTheme.colorScheme.onBackground
     ) {
